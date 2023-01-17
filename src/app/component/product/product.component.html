@@ -1,0 +1,42 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a>
+                <img src="https://cdn.corporatefinanceinstitute.com/assets/product-mix3.jpeg" alt="">
+                <h6>All products</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img src="https://www.americanchemistry.com/var/site/storage/images/6/4/1/3/83146-1-eng-US/Electonic-Devices.png" alt="">
+                <h6>Electronics</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQzw0CBEyjezf_nnQjYAyK0U1Z19qMtjQvYw&usqp=CAU" alt="">
+                <h6>Fashion</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img src="https://images.naptol.com/usr/local/csp/staticContent/product_images/horizontal/750x750/Sumangali-Jewellery-Collection-o1.jpg" alt="">
+                <h6>Jwellery</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h5 style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;max-width: 100;">{{item.title}}</h5>
+                <p style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;max-width: 100;">{{item.description}}</p>
+                <p><strong>${{item.price}}</strong></p>
+                <button class=" btn btn-primary" (click)=addtocart(item)>Add to Cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
