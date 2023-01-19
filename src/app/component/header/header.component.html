@@ -6,7 +6,7 @@
             <strong style="font-size:30px;">FlipKart</strong>
         
             <div class="form-group">
-                <input type="text" class="form-control align-item-left" placeholder="enter product">
+                <input type="text" class="form-control align-item-left" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="enter product">
             </div>
 
             <span class="fas fa-search search-icon"></span>
